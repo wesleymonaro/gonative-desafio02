@@ -46,7 +46,7 @@ export default class Issues extends Component {
 
     this.setState({ refreshing: true });
     try {
-      const { data: issues } = await api.get(`/repos/${repository.owner.login}/${repository.name}/issues`);
+      const { data: issues } = await api.get(`/repos/${repository.owner.login}/${repository.name}/issues?state=all`);
       console.tron.log('issues: ', issues);
 
 
